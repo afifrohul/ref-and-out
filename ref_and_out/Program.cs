@@ -8,7 +8,7 @@ namespace ref_and_out
     {
         static void Main(string[] args)
         {
-            string sql = "SELECT * FROM todo";
+            string sql = "SELECT * FROM mahasiswa";
 
             NpgsqlParameter[] parameters = new NpgsqlParameter[]
             {
@@ -24,8 +24,8 @@ namespace ref_and_out
 
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader.GetString(2) + " ");
-                    //Console.WriteLine(reader.GetInt32(3));
+                    Console.Write(reader.GetString(2) + " ");
+                    Console.WriteLine(reader.GetInt32(3));
                 }
             }
             
